@@ -22,7 +22,8 @@ Select * from Membership;
 //CREATING The 2nd Table
 create table Movies(
 Membership_Id int NOT NULL,
-Movies_Rented varchar(50)
+Movies_Rented varchar(50),
+FOREIGN KEY(Membership_ID) REFERENCES Membership(Membership_ID)
 );
 
 //INSERTING VALUES INSIDE THE 2nd TABLE
@@ -40,5 +41,7 @@ Salutation varchar(50)
 //INSERTING VALUES INSIDE THE 3rd TABLE
 inserte into Salutation_table(Salutation_Id,Salutation) values(1,"Mr."),(2,"Ms."),(3,"Mrs."),(4,"Dr.");
  
+ //TO VIEW THE 3rd TABLE
+Select * from Salutation_table;
 
 
